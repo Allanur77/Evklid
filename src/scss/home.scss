@@ -1,0 +1,78 @@
+//====================================================================================================
+.mainpage {
+    // .mainpage__slider
+
+    &__slider {
+        margin-top: 50px;
+    }
+}
+.main-slider {
+    // .main-slider__container
+
+    &__container {
+        @include adaptiveValue("padding-left", 70, 50, 1920, 1024, 1);
+        @include adaptiveValue("padding-right", 70, 50, 1920, 1024, 1);
+        @include adaptiveValue("padding-left", 50, 15, 768, 320, 1);
+        @include adaptiveValue("padding-right", 50, 15, 768, 320, 1);
+    }
+}
+.body-main-slider {
+    // .body-main-slider__slider
+
+    &__slider {
+    }
+
+    // .body-main-slider__swiper
+
+    &__swiper {
+    }
+
+    // .body-main-slider__slide
+
+    &__slide {
+    }
+}
+.slide-main-slider {
+    // .slide-main-slider__body
+    // background-image: url(../img/hero-1.jpg);
+    // background-position: center;
+    // background-size: cover;
+    // border-radius: 32px;
+
+    &__body {
+        max-width: 900px;
+        padding: 100px 0 100px 80px;
+    }
+
+    // .slide-main-slider__title
+
+    &__title {
+        font-family: Montserrat;
+        font-weight: 800;
+        font-size: 70px;
+        line-height: 1.2;
+        color: #fff;
+        margin-bottom: 24px;
+    }
+
+    // .slide-main-slider__text
+
+    &__text {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.2;
+        color: #fff;
+        margin-bottom: 90px;
+    }
+
+    // .slide-main-slider__btn
+
+    &__btn {
+        display: inline-block;
+    }
+}
+.btn {
+}
+
+//====================================================================================================

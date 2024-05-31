@@ -1,0 +1,253 @@
+.header {
+	border-radius: 0px 0px 32px 32px;
+	box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.1);
+
+	// .header__container
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include adaptiveValue("min-height", 100, 69, 1024, 768, 1);
+		@include adaptiveValue("padding-left", 70, 50, 1920, 1024, 1);
+		@include adaptiveValue("padding-right", 70, 50, 1920, 1024, 1);
+		@include adaptiveValue("padding-left", 50, 15, 768, 320, 1);
+		@include adaptiveValue("padding-right", 50, 15, 768, 320, 1);
+	}
+
+	// .header__column
+
+	&__column {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-grow: 0;
+		flex-shrink: 0;
+		@media (max-width: $tablet) {
+			justify-content: center;
+		}
+
+		&_wide {
+			flex: 1 1 auto;
+			padding-right: 30px;
+			@media (max-width: $tablet) {
+				order: 2;
+				position: relative;
+				top: 0;
+				left: 0;
+				text-align: center;
+				padding-right: 0;
+			}
+		}
+
+		&_nav {
+			@include adaptiveValue("margin-right", 260, 100, 1920, 1024, 1);
+			@media (max-width: $tablet) {
+				margin-right: 0;
+				order: 1;
+			}
+		}
+
+		&_search {
+			@media (max-width: $tablet) {
+				order: 2;
+				position: relative;
+			}
+		}
+	}
+
+	// .header__logo
+
+	&__logo {
+		& img {
+			width: 225px;
+			height: auto;
+			@include adaptiveValue("width", 225, 150, 1920, 1024, 1);
+			@include adaptiveValue("width", 150, 110, 768, 320, 3);
+		}
+	}
+
+	// .header__menu
+
+	&__menu {
+	}
+
+	// .header__intput
+
+	&__intput {
+		padding-bottom: 5px;
+		border: none;
+		border-bottom: 1px solid #cacaca;
+		font-family: Montserrat;
+		font-size: 18px;
+		font-weight: 500;
+		min-width: 412px;
+		margin-right: 14px;
+		color: #cacaca;
+	}
+
+	// .header__search-btn
+
+	&__search-btn {
+		background-color: #fff;
+		margin-right: 20px;
+	}
+
+	// .header__close-btn
+
+	&__close-btn {
+		background-color: #fff;
+	}
+
+	// .header__forms
+
+	&__forms {
+		display: flex;
+		flex-wrap: nowrap;
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		display: none;
+		padding: 16px 13px 16px 32px;
+		border-radius: 50px;
+		background-color: #fff;
+		filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.12));
+	}
+	// .header__search
+	&__search {
+	}
+}
+
+.menu {
+	// .menu__icon
+
+	&__icon {
+	}
+
+	// .menu__body
+
+	&__body {
+		@media (max-width: $tablet) {
+			position: fixed;
+			@include adaptiveValue("width", 420, 320, 768, 320, 1);
+			height: 100%;
+			top: 0;
+			left: -150%;
+			transition: left 0.3s ease 0s;
+			border-radius: 0px 0px 32px 32px;
+			background: #fff;
+			box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.1);
+			overflow-x: auto;
+			z-index: 3;
+			&::before {
+				content: "";
+				position: fixed;
+				@include adaptiveValue("width", 420, 320, 768, 320, 1);
+				top: 0;
+				left: -100%;
+				@include adaptiveValue("min-height", 100, 69, 1024, 768, 1);
+				background-color: #fff;
+				transition: left 0.3s ease 0s;
+				box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.1);
+			}
+			.menu-open & {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include adaptiveValue("column-gap", 85, 40, 1920, 1024, 1);
+		@media (max-width: $tablet) {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			@include adaptiveValue("padding-top", 170, 152, 1024, 768, 1);
+			@include adaptiveValue("padding-top", 152, 78, 768, 320, 1);
+			@include adaptiveValue("padding-left", 50, 15, 768, 320, 1);
+			@include adaptiveValue("row-gap", 60, 32, 768, 320, 1);
+		}
+	}
+
+	// .menu__item
+
+	&__item {
+		color: #000;
+		font-family: Montserrat;
+		font-size: 18px;
+		font-weight: 600;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 24, 16, 768, 320, 1);
+			font-weight: 700;
+		}
+	}
+
+	// .menu__link
+
+	&__link {
+	}
+}
+
+.icon-menu {
+}
+
+//====================================================================================================
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+	@media (max-width: $tablet) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 6;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+		}
+		&::before {
+			top: 0px;
+		}
+		&::after {
+			bottom: 0px;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+		.menu-open & {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}
