@@ -8,11 +8,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		@include adaptiveValue("min-height", 100, 69, 1024, 768, 1);
-		@include adaptiveValue("padding-left", 70, 50, 1920, 1024, 1);
-		@include adaptiveValue("padding-right", 70, 50, 1920, 1024, 1);
-		@include adaptiveValue("padding-left", 50, 15, 768, 320, 1);
-		@include adaptiveValue("padding-right", 50, 15, 768, 320, 1);
+
+		@include adaptiveValue("padding-left", 75, 50, 1920, 1024, 1);
+		@include adaptiveValue("padding-right", 75, 50, 1920, 1024, 1);
+
+		@media (max-width: $tablet) {
+			@include adaptiveValue("min-height", 100, 69, 1024, 768, 1);
+		}
+
+		@media (max-width: $mobile) {
+			@include adaptiveValue("padding-left", 50, 15, 768, 320, 1);
+			@include adaptiveValue("padding-right", 50, 15, 768, 320, 1);
+		}
 	}
 
 	// .header__column

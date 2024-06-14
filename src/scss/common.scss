@@ -1,9 +1,10 @@
 // Заголовки, общие БЄМ блоки и проче...
 .btn {
-    font-family: Montserrat;
-    padding: 19px 38px;
-    border-radius: 16px;
-    background-color: $orange;
-    @include adaptiveValue("font-size", 16, 14, 767, 320, 1);
-    color: #fff;
+	font-family: Montserrat;
+	padding: 19px 38px;
+	border-radius: 16px;
+	background-color: $orange;
+	font-weight: 700;
+	@include adaptiveValue("font-size", 16, 12, 767, 320, 1);
+	color: #fff;
 }
