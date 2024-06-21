@@ -8,6 +8,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		min-height: 100px;
 
 		@include adaptiveValue("padding-left", 75, 50, 1920, 1024, 1);
 		@include adaptiveValue("padding-right", 75, 50, 1920, 1024, 1);

@@ -9,6 +9,7 @@
 	&__container {
 		display: flex;
 		justify-content: space-between;
+		padding: 50px 75px;
 
 		@include adaptiveValue("padding-left", 75, 50, 1920, 1024, 1);
 		@include adaptiveValue("padding-right", 75, 50, 1920, 1024, 1);
