@@ -429,4 +429,184 @@
 
 //========================================================================================================================================================
 
+.mainpage {
+	// .mainpage__how-we-work
 
+	&__how-we-work {
+		margin-bottom: 111px;
+		@include adaptiveValue("margin-bottom", 111, 83, 1920, 1024, 1);
+		@media (max-width: $mobile) {
+			@include adaptiveValue("margin-bottom", 80, 60, 768, 320, 1);
+		}
+	}
+}
+.how-we-work {
+	// .how-we-work__wrap
+
+	&__wrap {
+	}
+
+	// .how-we-work__title
+
+	&__title {
+		margin-bottom: 50px;
+	}
+
+	// .how-we-work__tabs
+
+	&__tabs {
+	}
+}
+
+.tabs {
+	// .tabs__navigation
+
+	&__navigation {
+		display: flex;
+		column-gap: 85px;
+		font-size: 18px;
+		font-weight: 400;
+		@include adaptiveValue("margin-bottom", 45, 50, 1920, 1024, 1);
+
+		@media (max-width: $mobile) {
+			column-gap: 0;
+			justify-content: space-between;
+			@include adaptiveValue("margin-bottom", 50, 16, 768, 320, 1);
+		}
+
+		._tab-active {
+			color: $orange;
+		}
+	}
+
+	// .tabs__title
+
+	&__title {
+	}
+
+	// .tabs__content
+
+	&__content {
+	}
+
+	// .tabs__body
+
+	&__body {
+	}
+
+	// .tabs__columns
+
+	&__columns {
+		display: flex;
+		@include adaptiveValue("gap", 32, 50, 1920, 1024, 1);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("gap", 50, 30, 1024, 768, 1);
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			@include adaptiveValue("gap", 50, 16, 768, 320, 1);
+		}
+	}
+
+	// .tabs__column
+
+	&__column-left {
+		flex: 1 1 50%;
+		display: flex;
+		flex-direction: column;
+		@media (max-width: $mobile) {
+			order: 2;
+		}
+	}
+
+	// .tabs__subtitle
+
+	&__subtitle {
+		margin-bottom: 8px;
+	}
+
+	// .tabs__text
+
+	&__text {
+		flex: 1 1 auto;
+		max-width: 760px;
+	}
+
+	// .tabs__buttons
+
+	&__buttons {
+		margin-top: 18px;
+		@media (max-width: $mobile) {
+			margin-top: 25px;
+		}
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .tabs__details-btn
+
+	&__details-btn {
+		display: inline-block;
+		padding: 20px 38px;
+		font-weight: 700;
+		margin-right: 32px;
+		@media (max-width: em(865)) {
+			padding: 15px 20px;
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("margin-right", 32, 10, 768, 320, 1);
+			padding: 20px 38px;
+		}
+		@media (max-width: $mobileSmall) {
+			padding: 12px 44px;
+			border-radius: 8px;
+		}
+	}
+
+	// .tabs__agreement-btn
+
+	&__agreement-btn {
+		display: inline-block;
+		padding: 20px 38px;
+		font-weight: 400;
+		background-color: inherit;
+		border: 1px solid black;
+		color: black;
+		@media (max-width: em(865)) {
+			padding: 15px 20px;
+		}
+		@media (max-width: $mobile) {
+			padding: 20px 38px;
+		}
+		@media (max-width: $mobileSmall) {
+			padding: 12px 32px;
+			border-radius: 8px;
+		}
+	}
+
+	&__column-right {
+		display: flex;
+		align-items: stretch;
+		flex: 1 1 50%;
+		@media (max-width: $mobile) {
+			order: 1;
+			max-height: 284px;
+		}
+	}
+
+	// .tabs__picture
+
+	&__picture {
+		img {
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+			height: 100%;
+			border-radius: 32px;
+			@media (max-width: $mobile) {
+				border-radius: 24px;
+			}
+		}
+	}
+}
+// ._tab-active
