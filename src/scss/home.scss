@@ -609,4 +609,39 @@
 		}
 	}
 }
-// ._tab-active
+
+//========================================================================================================================================================
+
+.mainpage {
+	// .mainpage__faq
+
+	&__faq {
+		@include adaptiveValue("margin-bottom", 100, 80, 1920, 1024, 1);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("margin-bottom", 80, 111, 1024, 768, 1);
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("margin-bottom", 111, 60, 768, 320, 1);
+		}
+	}
+}
+.faq {
+	// .faq__wrap
+
+	&__wrap {
+	}
+
+	// .faq__title
+
+	&__title {
+		margin-bottom: 32px;
+		@media (max-width: $mobile) {
+			@include adaptiveValue("margin-bottom", 32, 16, 768, 320, 1);
+		}
+	}
+
+	// .faq__spollers
+
+	&__spollers {
+	}
+}
