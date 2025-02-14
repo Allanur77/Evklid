@@ -5,19 +5,20 @@
 	&__container {
 		@include adaptiveValue("padding-left", 70, 50, 1920, 1024, 1);
 		@include adaptiveValue("padding-right", 70, 50, 1920, 1024, 1);
+		@include adaptiveValue("margin-top", 150, 140, 1920, 1024, 1);
+		@include adaptiveValue("margin-bottom", 50, 40, 1920, 1024, 1);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("margin-top", 140, 109, 1024, 768, 1);
+		}
 		@media (max-width: $mobile) {
 			@include adaptiveValue("padding-left", 50, 15, 768, 320, 1);
 			@include adaptiveValue("padding-right", 50, 15, 768, 320, 1);
+			@include adaptiveValue("margin-top", 109, 99, 768, 320, 1);
+			@include adaptiveValue("margin-bottom", 40, 30, 768, 320, 1);
 		}
 	}
 
 	&__slider {
-		@include adaptiveValue("margin-top", 50, 40, 1920, 1024, 1);
-		@include adaptiveValue("margin-bottom", 50, 40, 1920, 1024, 1);
-		@media (max-width: $mobile) {
-			@include adaptiveValue("margin-top", 40, 30, 768, 320, 1);
-			@include adaptiveValue("margin-bottom", 40, 30, 768, 320, 1);
-		}
 	}
 }
 .main-slider {
@@ -364,9 +365,9 @@
 	&__wrap {
 		display: flex;
 		align-items: center;
-		@include adaptiveValue("column-gap", 50, 30, 1920, 1440, 1);
 		border: 1px solid #cacaca;
 		border-radius: 32px;
+		@include adaptiveValue("column-gap", 50, 30, 1920, 1440, 1);
 		@include adaptiveValue("padding-top", 65, 20, 1920, 1440, 1);
 		@include adaptiveValue("padding-bottom", 65, 20, 1920, 1440, 1);
 		@include adaptiveValue("padding-left", 120, 40, 1920, 1440, 1);
@@ -536,11 +537,12 @@
 
 	&__buttons {
 		margin-top: 18px;
+		display: flex;
+		justify-content: space-between;
+
 		@media (max-width: $mobile) {
 			margin-top: 25px;
 		}
-		display: flex;
-		justify-content: space-between;
 	}
 
 	// .tabs__details-btn
